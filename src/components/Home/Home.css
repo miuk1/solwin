@@ -1,0 +1,30 @@
+/* Add this CSS to your stylesheet (e.g., styles.css) */
+
+@keyframes jackpot {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-20px);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  75% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-jackpot {
+  animation: jackpot 2s ease-in-out infinite;
+  color: red;
+}
+
+/*Slant the bottom side of the hero*/
+.hero {
+  clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+}
