@@ -1,0 +1,51 @@
+.solwin-slot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+.slot-machine {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.slot-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.slot {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.slot-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.slot-image.spinning {
+    transform: rotate(180deg);
+}
+
+
+.spin-button {
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px; /* Rounded border */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.spin-button.spinning {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
