@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import singleSlotMachineImage from '../../assets/images/slot1.png'; // Make sure to import your image
 import './Dashboard.css';
@@ -11,6 +10,12 @@ const Dashboard = () => {
 
     const depositMoney = (amount: number) => {
         // Logic to deposit money into the user's account
+        const updatedUser = {
+            ...user,
+            accountBalance: user.accountBalance + amount
+        };
+        localStorage.setItem('user', JSON.stringify(updatedUser));
+        window.location.reload();
     };
 
     return (
