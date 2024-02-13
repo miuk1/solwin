@@ -29,7 +29,7 @@ pipeline {
         
         stage('Deploy to azure') {
             steps{
-                withCredentials([sshUserPrivateKey(credentialsId: 'solwinadmin', keyFileVariable: 'SSH_KEY_FILE']) {
+                withCredentials([sshUserPrivateKey(credentialsId: 'solwinadmin', keyFileVariable: 'SSH_KEY_FILE')]) {
                     script {
                         // Copy the build to the remote server
                         sh "scp -i $SSH_KEY_FILE -o StrictHostKeyChecking=no -r $BUILD_ARTIFACT solwinadmin@$VM_IP_ADDRESS:/var/www/html"
