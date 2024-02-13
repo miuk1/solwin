@@ -34,6 +34,7 @@ pipeline {
                         // Copy the build to the remote server
                         sh "scp -i $SSH_KEY_FILE -o StrictHostKeyChecking=no -r $BUILD_ARTIFACT solwinadmin@$VM_IP_ADDRESS:/var/www/html"
                     }
+                }
             }
         }    
     }
